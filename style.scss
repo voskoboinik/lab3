@@ -1,0 +1,94 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 2rem;
+
+  #theme-toggle {
+    @include button-style($main-color, white);
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+  @include card-style($main-color);
+  width: 300px;       // фиксированная ширина для всех карточек
+  min-height: 400px;  // минимальная высота, чтобы карточки одинаковые
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .name {
+    margin: 1rem 0 0.5rem;
+    color: $main-color;
+  }
+
+  .desc {
+    margin-bottom: 1rem;
+    color: $text-color;
+  }
+
+  .btn {
+    @include button-style($main-color, white);
+  }
+}
+
+
+  @media (max-width: $mobile) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      max-width: 90%;
+    }
+  }
+}
+
+// Тёмная тема
+body.dark {
+  background-color: $dark-bg;
+  color: $dark-text;
+
+  .card {
+    background-color: #333;
+    border-color: $dark-border;
+
+    .name {
+      color: $dark-text;
+    }
+
+    .desc {
+      color: $dark-text;  // <-- добавили для описания
+    }
+
+    .btn {
+      @include button-style($dark-border, $dark-text);
+    }
+  }
+
+  #theme-toggle {
+    @include button-style($dark-border, $dark-text);
+  }
+}

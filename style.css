@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 2rem;
+}
+body #theme-toggle {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+body #theme-toggle:hover {
+  background-color: rgb(60.5577689243, 139.4422310757, 63.7450199203);
+}
+body #theme-toggle {
+  margin-bottom: 2rem;
+}
+body .container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .card {
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  text-align: center;
+  width: 300px;
+  min-height: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+body .card:hover {
+  transform: scale(1.03);
+}
+body .card .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+body .card .name {
+  margin: 1rem 0 0.5rem;
+  color: #4CAF50;
+}
+body .card .desc {
+  margin-bottom: 1rem;
+  color: #333;
+}
+body .card .btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+body .card .btn:hover {
+  background-color: rgb(60.5577689243, 139.4422310757, 63.7450199203);
+}
+@media (max-width: 600px) {
+  body .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .card {
+    max-width: 90%;
+  }
+}
+
+body.dark {
+  background-color: #222;
+  color: #eee;
+}
+body.dark .card {
+  background-color: #333;
+  border-color: #555;
+}
+body.dark .card .name {
+  color: #eee;
+}
+body.dark .card .desc {
+  color: #eee;
+}
+body.dark .card .btn {
+  background-color: #555;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+body.dark .card .btn:hover {
+  background-color: rgb(59.5, 59.5, 59.5);
+}
+body.dark #theme-toggle {
+  background-color: #555;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+body.dark #theme-toggle:hover {
+  background-color: rgb(59.5, 59.5, 59.5);
+}
+
+/*# sourceMappingURL=style.css.map */

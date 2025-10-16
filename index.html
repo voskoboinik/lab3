@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль разработчика</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Если хочешь, SCSS уже скомпилируй в style.css */
+  </style>
+</head>
+<body>
+  <button id="theme-toggle">🌙 Темная тема</button>
+
+  <div class="container">
+    <div class="card">
+      <img src="me.jpg" alt="Аватар" class="avatar">
+      <h1 class="name">Людмила Воскобойник</h1>
+      <p class="desc">Frontend-разработчик</p>
+      <button class="btn">Связаться</button>
+    </div>
+
+<div class="card">
+  <img src="lena.jpg" alt="Аватар" class="avatar">
+  <h1 class="name">Елена<br>Родюкова</h1>
+  <p class="desc">Backend-разработчик</p>
+  <button class="btn">Профиль</button>
+</div>
+
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+
+      if(body.classList.contains('dark')){
+        toggleBtn.textContent = '☀️ Светлая тема';
+      } else {
+        toggleBtn.textContent = '🌙 Темная тема';
+      }
+    });
+  </script>
+</body>
+</html>

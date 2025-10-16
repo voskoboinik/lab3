@@ -1,0 +1,23 @@
+// Миксин для кнопок
+@mixin button-style($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: darken($bg, 10%);
+  }
+}
+
+// Миксин для карточек
+@mixin card-style($border-color) {
+  border: 2px solid $border-color;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  text-align: center;
+}
